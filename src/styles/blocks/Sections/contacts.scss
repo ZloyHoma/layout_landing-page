@@ -1,0 +1,95 @@
+.contacts {
+  background-color: $secondary-text-color;
+  &__first-title {
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 48px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+    text-align: center;
+  }
+
+  &__button {
+    margin-inline: 20px;
+    box-sizing: border-box;
+    width: 278px;
+    height: 56px;
+    border-radius: 40px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 27px;
+    &:hover {
+      box-shadow: 1px 4px 16px 0 #e8e8f066;
+    }
+    &:active {
+      box-shadow: 1px 4px 16px 0 #e8e8f0a3;
+    }
+  }
+
+  &__titles {
+    margin: 0;
+    padding: 24px 20px 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    &:first-of-type {
+      padding-top: 48px;
+    }
+  }
+
+  &__phone-number {
+    padding-left: 20px;
+    text-decoration: none;
+    color: $main-text-color;
+  }
+
+  &__text {
+    margin: 0;
+    padding-left: 20px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 140%;
+    &:last-of-type {
+      padding-bottom: 120px;
+    }
+  }
+}
+
+input {
+  width: 85%;
+  box-sizing: border-box;
+  margin-left: 20px;
+  padding-left: 20px;
+  height: 48px;
+  border-radius: 25px;
+  margin-bottom: 16px;
+
+  &::placeholder {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+textarea {
+  height: 148px;
+  margin-inline: 20px;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 85%;
+  padding: 15px 20px;
+  &::placeholder {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
