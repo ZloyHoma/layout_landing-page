@@ -80,6 +80,7 @@
     height: 48px;
     border-radius: 25px;
     margin-bottom: 16px;
+    outline: none;
 
     @include input-text-style;
 
@@ -95,6 +96,7 @@
     width: 100%;
     padding: 16px 14px;
     margin-bottom: 32px;
+    resize: none;
 
     @include input-text-style;
 
