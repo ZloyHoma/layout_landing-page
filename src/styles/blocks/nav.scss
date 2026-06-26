@@ -1,8 +1,11 @@
 .nav {
+  padding-bottom: 40px;
   &__item {
-    margin-bottom: 32px;
+    padding-bottom: 30px;
+    line-height: 22px;
+
     &:last-child {
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
   &__list {
@@ -11,14 +14,18 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    line-height: 22px;
+    box-sizing: border-box;
   }
 
   &__link {
-    box-sizing: border-box;
-    color: #1d1d1d;
+    color: $secondary-color;
     text-decoration: none;
     font-size: 22px;
+    line-height: 22px;
     letter-spacing: 2px;
+
+    &:hover {
+      border-bottom: 1px solid $secondary-color;
+    }
   }
 }

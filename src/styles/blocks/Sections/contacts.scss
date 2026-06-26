@@ -1,28 +1,26 @@
 .contacts {
-  background-color: $secondary-text-color;
+  background-color: $secondary-color;
+  padding-inline: $mobile-inline-padding;
+  padding-bottom: 120px;
+
   &__first-title {
     margin: 0;
-    padding-top: 80px;
     padding-bottom: 48px;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 32px;
-    line-height: 32px;
-    letter-spacing: -1.5px;
     text-align: center;
+
+    @include h2-text-style;
   }
 
   &__button {
-    margin-inline: 20px;
     box-sizing: border-box;
-    width: 278px;
+    width: 100%;
     height: 56px;
     border-radius: 40px;
     font-family: Poppins, sans-serif;
     font-weight: 700;
-    font-style: Bold;
     font-size: 16px;
     line-height: 27px;
+
     &:hover {
       box-shadow: 1px 4px 16px 0 #e8e8f066;
     }
@@ -31,65 +29,128 @@
     }
   }
 
+  &__input-block {
+    padding-bottom: 48px;
+  }
+
   &__titles {
     margin: 0;
-    padding: 24px 20px 8px;
+    padding-bottom: 8px;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
-    &:first-of-type {
-      padding-top: 48px;
-    }
+    letter-spacing: 0;
   }
 
   &__phone-number {
-    padding-left: 20px;
+    display: block;
     text-decoration: none;
-    color: $main-text-color;
+    color: $main-color;
+    font-weight: 500;
+    padding-bottom: 24px;
+    line-height: 140%;
+    letter-spacing: 0;
+    transition: all $animation-time;
+
+    &:hover {
+      color: $background-menu-color;
+      scale: 0.99;
+    }
   }
 
-  &__text {
+  &__info {
     margin: 0;
-    padding-left: 20px;
     font-weight: 500;
-    font-style: Medium;
     font-size: 16px;
     line-height: 140%;
-    &:last-of-type {
-      padding-bottom: 120px;
+    letter-spacing: 0;
+    padding-bottom: 24px;
+    transition: all $animation-time;
+
+    &:hover {
+      color: $background-menu-color;
+      scale: 0.99;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 16px;
+    height: 48px;
+    border-radius: 25px;
+    margin-bottom: 16px;
+
+    @include input-text-style;
+
+    &::placeholder {
+      @include input-text-style;
+    }
+  }
+
+  &__textarea {
+    height: 148px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    width: 100%;
+    padding: 16px 14px;
+    margin-bottom: 32px;
+
+    @include input-text-style;
+
+    &::placeholder {
+      @include input-text-style;
     }
   }
 }
 
-input {
-  width: 85%;
-  box-sizing: border-box;
-  margin-left: 20px;
-  padding-left: 20px;
-  height: 48px;
-  border-radius: 25px;
-  margin-bottom: 16px;
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  &::placeholder {
-    font-family: Poppins, sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+@media (min-width: $tablet-min-width) {
+  .contacts {
+    padding-inline: $tablet-inline-padding;
+    padding-bottom: 102px;
+    display: grid;
+    grid-template-columns: repeat(6, 80px);
+    column-gap: 24px;
+
+    &__first-title {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+
+    &__input-block {
+      grid-column: 1 / 4;
+      padding-bottom: 0;
+    }
+
+    &__info-block {
+      grid-column: 4 / -1;
+      align-self: start;
+    }
   }
 }
 
-textarea {
-  height: 148px;
-  margin-inline: 20px;
-  margin-bottom: 32px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  width: 85%;
-  padding: 15px 20px;
-  &::placeholder {
-    font-family: Poppins, sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+@media (min-width: $pc-min-width) {
+  .contacts {
+    padding-inline: $pc-inline-padding;
+    padding-bottom: 164px;
+    grid-template-columns: repeat(12, 63px);
+    column-gap: 24px;
+
+    &__first-title {
+      font-size: 48px;
+    }
+
+    &__input-block {
+      grid-column: 1 / 6;
+    }
+
+    &__info-block {
+      grid-column: 8 / -1;
+    }
   }
 }

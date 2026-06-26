@@ -11,6 +11,11 @@
     />
     <title>MyBiKE</title>
     <link
+      rel="icon"
+      href="/src/images/Icons/favicon.png"
+      type="image"
+    />
+    <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
     />
@@ -64,11 +69,9 @@
       id="menu"
     >
       <div class="top-bar menu__top">
-        <a
-          href="#"
-          class="menu__top-logo"
-        >
+        <a href="#">
           <img
+            class="menu__top-logo"
             src="/src/images/logo-black.png"
             alt="BiKE Logo"
           />
@@ -158,46 +161,48 @@
       >
         <h2 class="compare-bikes__title">Compare Bikes</h2>
 
-        <div class="card">
-          <img
-            class="card__photo"
-            src="/src/images/first-bike-photo.png"
-            alt="Bike Photo"
-          />
-          <h3 class="card__title">Sporty 4</h3>
-          <p class="card__text">
-            The iconic frame brought to a new performance height as a sporty,
-            active ride.
-          </p>
-          <span class="card__price">$ 2 590</span>
-        </div>
+        <div class="compare-bikes__cards-block">
+          <div class="card">
+            <img
+              class="card__photo"
+              src="/src/images/first-bike-photo.png"
+              alt="Bike Photo"
+            />
+            <h3 class="card__title">Sporty 4</h3>
+            <p class="card__text">
+              The iconic frame brought to a new performance height as a sporty,
+              active ride.
+            </p>
+            <span class="card__price">$ 2 590</span>
+          </div>
 
-        <div class="card">
-          <img
-            class="card__photo"
-            src="/src/images/second-bike-photo.png"
-            alt="Bike Photo"
-          />
-          <h3 class="card__title">Ride in town ST</h3>
-          <p class="card__text">
-            An open frame for an upright riding position as the most comfortable
-            ride in town.
-          </p>
-          <span class="card__price">$ 2 590</span>
-        </div>
+          <div class="card">
+            <img
+              class="card__photo"
+              src="/src/images/second-bike-photo.png"
+              alt="Bike Photo"
+            />
+            <h3 class="card__title">Ride in town ST</h3>
+            <p class="card__text">
+              An open frame for an upright riding position as the most
+              comfortable ride in town.
+            </p>
+            <span class="card__price">$ 2 590</span>
+          </div>
 
-        <div class="card">
-          <img
-            class="card__photo"
-            src="/src/images/third-bike-photo.png"
-            alt="Bike Photo"
-          />
-          <h3 class="card__title">Agile ride 3</h3>
-          <p class="card__text">
-            The lightweight frame that has earned its street tread as a sleek,
-            agile ride.
-          </p>
-          <span class="card__price">$ 2 090</span>
+          <div class="card">
+            <img
+              class="card__photo"
+              src="/src/images/third-bike-photo.png"
+              alt="Bike Photo"
+            />
+            <h3 class="card__title">Agile ride 3</h3>
+            <p class="card__text">
+              The lightweight frame that has earned its street tread as a sleek,
+              agile ride.
+            </p>
+            <span class="card__price">$ 2 090</span>
+          </div>
         </div>
       </section>
 
@@ -269,50 +274,77 @@
             visibility day and night.
           </p>
         </div>
-        <div class="details__button-pos">
-          <button class="details__button">Explore</button>
-        </div>
+
+        <button
+          type="button"
+          class="details__button"
+        >
+          Explore
+        </button>
       </section>
 
       <section
         class="contacts"
         id="contacts"
       >
-        <h2 class="contacts__title">Contacts</h2>
-        <input
-          type="text"
-          name="Name"
-          placeholder="Name"
-          maxlength="50"
-          minlength="2"
-          autocomplete="on"
-        />
-        <input
-          type="email"
-          name="Email"
-          placeholder="Email"
-          minlength="7"
-        />
-        <textarea placeholder="message"></textarea>
-        <button class="contacts__button">Send</button>
-        <h3>Phone</h3>
-        <a
-          href="tel:+123455555555"
-          class="contacts__phone-number"
-        >
-          +1 234 5555-55-55
-        </a>
+        <h2 class="contacts__first-title">Contact us</h2>
 
-        <h3>Email</h3>
-        <p>hello@miami.com</p>
+        <div class="contacts__input-block">
+          <input
+            class="contacts__input"
+            type="text"
+            name="Name"
+            placeholder="Name"
+            maxlength="50"
+            minlength="2"
+            autocomplete="on"
+          />
+          <input
+            class="contacts__input"
+            type="email"
+            name="Email"
+            placeholder="Email"
+            minlength="7"
+          />
+          <textarea
+            placeholder="Message"
+            class="contacts__textarea"
+          ></textarea>
+          <button class="contacts__button">Send</button>
+        </div>
 
-        <h3>Address</h3>
-        <p>400 first ave. suite 700 Minneapolis, MN 55401</p>
+        <div class="contacts__info-block">
+          <h3 class="contacts__titles">Phone</h3>
+          <a
+            href="tel:+123455555555"
+            class="contacts__phone-number"
+          >
+            +1 234 5555-55-55
+          </a>
+
+          <h3 class="contacts__titles">Email</h3>
+          <p class="contacts__info">hello@miami.com</p>
+
+          <h3 class="contacts__titles">Address</h3>
+          <a
+            class="contacts__info"
+            href="https://maps.app.goo.gl/xxD4o7tdf7mcqYy66"
+            target="blank"
+          >
+            400 first ave.
+            <br />
+            suite 700
+            <br />
+            Minneapolis, MN 55401
+          </a>
+        </div>
       </section>
+
+      <img
+        src="/src/images/footer.png"
+        alt="footer.png"
+      />
     </main>
-    <!--
-    <footer class="footer">
-      <img src="/src/images/footer.png" alt="footer.png">
-    </footer> -->
+    <script src="../src/scripts/main.js"></script>
   </body>
 </html>
