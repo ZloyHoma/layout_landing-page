@@ -84,12 +84,19 @@
   }
 
   &__email {
+    display: block;
     margin: 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0;
     padding-bottom: 24px;
+    transition: all $animation-time;
+
+    &:hover {
+      color: $background-menu-color;
+      transform: scale(0.99);
+    }
   }
 
   &__input {
