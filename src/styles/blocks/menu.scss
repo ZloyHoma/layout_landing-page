@@ -1,11 +1,18 @@
 .menu {
   box-sizing: border-box;
   height: 100vh;
+  width: 100%;
   background-color: $background-menu-color;
   text-transform: uppercase;
   font-family: Poppins, sans-serif;
   font-weight: 600;
   overflow: auto;
+  transition: all $animation-time ease-in-out;
+  transform: translateX(100%);
+
+  &:target {
+    transform: translateX(0);
+  }
 
   &__top {
     position: sticky; // to keep cross always visible

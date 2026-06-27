@@ -87,6 +87,8 @@
     &::placeholder {
       @include input-text-style;
     }
+
+
   }
 
   &__textarea {
@@ -97,6 +99,11 @@
     padding: 16px 14px;
     margin-bottom: 32px;
     resize: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
 
     @include input-text-style;
 
@@ -116,7 +123,7 @@ a {
     padding-inline: $tablet-inline-padding;
     padding-bottom: 102px;
     display: grid;
-    grid-template-columns: repeat(6, 80px);
+    grid-template-columns: repeat(6, minmax(80px, 1fr));
     column-gap: 24px;
 
     &__first-title {
@@ -140,7 +147,7 @@ a {
   .contacts {
     padding-inline: $pc-inline-padding;
     padding-bottom: 164px;
-    grid-template-columns: repeat(12, 63px);
+    grid-template-columns: repeat(12, minmax(63px, 1fr));
     column-gap: 24px;
 
     &__first-title {

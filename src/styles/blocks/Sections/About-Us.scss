@@ -25,7 +25,7 @@
   @media (min-width: $tablet-min-width) {
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(6, 80px);
+    grid-template-columns: repeat(6, minmax(80px, 1fr));
     padding: $pc-inline-padding $tablet-inline-padding 132px;
 
     &__title {
@@ -38,7 +38,7 @@
   }
 
   @media (min-width: $pc-min-width) {
-    grid-template-columns: repeat(12, 63px);
+    grid-template-columns: repeat(12, minmax(63px, 1fr));
     padding: $pc-inline-padding $pc-inline-padding 164px;
 
     &__title {
