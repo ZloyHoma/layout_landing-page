@@ -1,7 +1,6 @@
 .about-us {
-  display: grid;
-  grid-template-columns: repeat(2, 130px);
-  justify-content: center;
+  @include mobile-grid;
+
   padding: 60px $mobile-inline-padding 92px;
   text-align: left;
   background-color: $secondary-color;

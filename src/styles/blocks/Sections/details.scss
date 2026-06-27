@@ -1,12 +1,9 @@
 .details {
+  @include mobile-grid;
+
   background-color: $secondary-color;
   padding-inline: $mobile-inline-padding;
   padding-bottom: 80px;
-
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(2, 130px);
-  column-gap: 20px;
 
   &__title {
     grid-column: 1 / -1;

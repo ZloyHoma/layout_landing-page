@@ -1,9 +1,9 @@
 .compare-bikes {
+  @include mobile-grid;
+
   background-color: $secondary-color;
   padding-inline: $mobile-inline-padding;
   padding-bottom: 92px;
-  display: grid;
-  justify-content: center;
 
   &__title {
     margin: 0;
@@ -92,7 +92,7 @@
 
     &__cards-block {
       display: grid;
-      
+
       @include pc-grid;
     }
 
