@@ -39,3 +39,21 @@
   line-height: 20px;
   letter-spacing: 0;
 }
+
+@mixin reset-autofill {
+  -webkit-box-shadow: 0 0 0 1000px $secondary-color inset;
+  -webkit-text-fill-color: $main-color;
+  caret-color: $main-color;
+}
+
+@mixin tablet-grid {
+  grid-template-columns: repeat(6, 80px);
+  column-gap: 24px;
+  justify-content: center;
+}
+
+@mixin pc-grid {
+  grid-template-columns: repeat(12, 63px);
+  column-gap: 24px;
+  justify-content: center;
+}

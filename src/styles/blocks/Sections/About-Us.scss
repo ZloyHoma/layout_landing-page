@@ -1,11 +1,13 @@
 .about-us {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  justify-content: center;
   padding: 60px $mobile-inline-padding 92px;
   text-align: left;
   background-color: $secondary-color;
 
   &__title {
+    grid-column: 1 / -1;
     margin: 0;
     padding-bottom: 32px;
     color: $main-color;
@@ -14,6 +16,7 @@
   }
 
   &__text {
+    grid-column: 1 / -1;
     margin: 0;
     text-wrap: wrap;
     font-weight: 500;
@@ -23,10 +26,9 @@
   }
 
   @media (min-width: $tablet-min-width) {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(6, minmax(80px, 1fr));
     padding: $pc-inline-padding $tablet-inline-padding 132px;
+
+    @include tablet-grid;
 
     &__title {
       grid-column: 1 / 4;
@@ -38,15 +40,16 @@
   }
 
   @media (min-width: $pc-min-width) {
-    grid-template-columns: repeat(12, minmax(63px, 1fr));
     padding: $pc-inline-padding $pc-inline-padding 164px;
 
+    @include pc-grid;
+
     &__title {
-      grid-column: 1 / 7;
+      grid-column: 1 / 6;
     }
 
     &__text {
-      grid-column: 7 / -1;
+      grid-column: 6 / -1;
     }
   }
 }

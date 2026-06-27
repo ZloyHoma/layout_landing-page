@@ -2,8 +2,13 @@
   background-color: $secondary-color;
   padding-inline: $mobile-inline-padding;
   padding-bottom: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  column-gap: 20px;
+  justify-content: center;
 
   &__first-title {
+    grid-column: 1 / -1;
     margin: 0;
     padding-bottom: 48px;
     text-align: center;
@@ -12,6 +17,7 @@
   }
 
   &__button {
+    grid-column: 1 / -1;
     box-sizing: border-box;
     width: 100%;
     height: 56px;
@@ -30,7 +36,12 @@
   }
 
   &__input-block {
+    grid-column: 1 / -1;
     padding-bottom: 48px;
+  }
+
+  &__info-block {
+    grid-column: 1 / -1;
   }
 
   &__titles {
@@ -54,11 +65,12 @@
 
     &:hover {
       color: $background-menu-color;
-      scale: 0.99;
+      transform: scale(0.99);
     }
   }
 
-  &__info {
+  &__adress {
+    display: block;
     margin: 0;
     font-weight: 500;
     font-size: 16px;
@@ -69,8 +81,17 @@
 
     &:hover {
       color: $background-menu-color;
-      scale: 0.99;
+      transform: scale(0.99);
     }
+  }
+
+  &__email {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+    padding-bottom: 24px;
   }
 
   &__input {
@@ -88,7 +109,16 @@
       @include input-text-style;
     }
 
+    &:-webkit-autofill {
+      @include reset-autofill;
+    }
 
+    &:hover {
+      border: 1px solid #d5d7de;
+    }
+    &::after {
+      border: 1px solid #292929;
+    }
   }
 
   &__textarea {
@@ -110,6 +140,18 @@
     &::placeholder {
       @include input-text-style;
     }
+
+    &:-webkit-autofill {
+      @include reset-autofill;
+    }
+
+    &:hover {
+      border: 1px solid #d5d7de;
+    }
+
+    &::after {
+      border: 1px solid #292929;
+    }
   }
 }
 
@@ -122,9 +164,8 @@ a {
   .contacts {
     padding-inline: $tablet-inline-padding;
     padding-bottom: 102px;
-    display: grid;
-    grid-template-columns: repeat(6, minmax(80px, 1fr));
-    column-gap: 24px;
+
+    @include tablet-grid;
 
     &__first-title {
       grid-column: 1 / -1;
@@ -147,8 +188,8 @@ a {
   .contacts {
     padding-inline: $pc-inline-padding;
     padding-bottom: 164px;
-    grid-template-columns: repeat(12, minmax(63px, 1fr));
-    column-gap: 24px;
+
+    @include pc-grid;
 
     &__first-title {
       font-size: 48px;
