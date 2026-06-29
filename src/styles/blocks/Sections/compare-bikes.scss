@@ -1,17 +1,22 @@
 .compare-bikes {
   @include mobile-grid;
-
+  
   background-color: $secondary-color;
   padding-inline: $mobile-inline-padding;
   padding-bottom: 92px;
 
   &__title {
+    grid-column: 1 / -1;
     margin: 0;
     padding-bottom: 48px;
     color: $main-color;
     text-align: center;
 
     @include h2-text-style;
+  }
+
+  &__cards-block {
+    grid-column: 1 / -1;
   }
 }
 

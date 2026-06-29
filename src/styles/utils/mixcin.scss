@@ -41,26 +41,26 @@
 }
 
 @mixin reset-autofill {
-  -webkit-box-shadow: 0 0 0 1000px $secondary-color inset;
-  -webkit-text-fill-color: $main-color;
-  caret-color: $main-color;
+  -webkit-box-shadow: 0 0 0 1000px $main-color inset;
+  -webkit-text-fill-color: $secondary-color;
+  caret-color: $secondary-color;
 }
 
 @mixin mobile-grid {
   display: grid;
   column-gap: 20px;
-  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  grid-template-columns: repeat(2, 130px);
   justify-content: center;
 }
 
 @mixin tablet-grid {
-  grid-template-columns: repeat(6, minmax(80px, 1fr));
+  grid-template-columns: repeat(6, 80px);
   column-gap: 24px;
   justify-content: center;
 }
 
 @mixin pc-grid {
-  grid-template-columns: repeat(12, minmax(63px, 1fr));
+  grid-template-columns: repeat(12, 63px);
   column-gap: 24px;
   justify-content: center;
 }

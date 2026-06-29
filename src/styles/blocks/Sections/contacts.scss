@@ -140,14 +140,14 @@
       box-shadow: none;
     }
 
+    &:-webkit-autofill {
+      @include reset-autofill;
+    }
+
     @include input-text-style;
 
     &::placeholder {
       @include input-text-style;
-    }
-
-    &:-webkit-autofill {
-      @include reset-autofill;
     }
 
     &:hover {
